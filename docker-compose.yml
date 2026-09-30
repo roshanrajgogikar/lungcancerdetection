@@ -1,0 +1,13 @@
+services:
+  lung-cancer-prediction:
+    build: .
+    container_name: lung-cancer-prediction
+    ports:
+      - "8501:8501"
+    environment:
+      DATABASE_URL: "${DATABASE_URL:-}"
+    volumes:
+      - ./instance:/app/instance
+      - ./data:/app/data
+      - ./artifacts:/app/artifacts
+    restart: unless-stopped
