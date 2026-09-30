@@ -10,6 +10,28 @@ This is an educational survey-classification prototype, not a medical device. Th
 
 If the app cannot download or read the survey, it trains on generated demo records so the website still opens. In that case a warning banner identifies the synthetic fallback, and the metrics and predictions are for interface demonstration only.
 
+## Project Structure
+```text
+Lung-Cancer-Prediction/
+├── app.py
+├── model.py
+├── requirements.txt
+├── Dockerfile
+├── docker-compose.yml
+├── .env.example
+├── data/
+│   └── lung-cancer-survey.csv
+├── artifacts/
+│   ├── model.pkl
+│   └── metadata.json
+├── instance/
+│   └── app.db
+└── static/
+    ├── index.html
+    ├── styles.css
+    └── app.js
+```
+
 ## Run locally on Windows
 
 1. Install Python 3.11.
